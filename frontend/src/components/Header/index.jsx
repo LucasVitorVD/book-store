@@ -1,6 +1,7 @@
 import { LiaHomeSolid } from 'react-icons/lia'
 import { BsCart2 } from 'react-icons/bs'
 import { StyledHeader } from './Styled'
+import Button from '../Elements/Button'
 
 export default function Header() {
   return (
@@ -22,7 +23,7 @@ export default function Header() {
         <h1>BookSpace</h1>
         <div className='search_container'>
           <input className='search_input' type="search" />
-          <button>Search</button>
+          <Button text="Search" />
         </div>
       </div>
       <div className="header_filters">

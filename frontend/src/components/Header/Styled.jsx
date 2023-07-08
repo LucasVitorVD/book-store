@@ -67,28 +67,11 @@ export const StyledHeader = styled.header`
 
       & input {
         width: 37.6875rem;
-        height: 2.5rem;
-        border-radius: 10px;
         border: none;
         font-size: 1.1rem;
-        padding-inline: .5rem;
-      }
-
-      & button {
-        padding: 0.625rem 1.2rem;
-        background-color: ${({ theme }) => theme.colors.buttonsBg};
-        border: none;
-        border-radius: 20px;
-        text-align: center;
-        font-size: 1.375rem;
-        font-weight: 400;
-        letter-spacing: -0.06188rem;
-        transition: .2s;
-
-        &:hover {
-          cursor: pointer;
-          opacity: .8;
-        }
+        padding: .5rem;
+        border-radius: 0.25rem;
+        border: 1px solid #E7D6AC;
       }
     }
   }
@@ -111,6 +94,7 @@ export const StyledHeader = styled.header`
       border: none;
       background-color: transparent;
       font-size: 1.5rem;
+      outline: none;
       cursor: pointer;
     }
 
