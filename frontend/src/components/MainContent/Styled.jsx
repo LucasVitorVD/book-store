@@ -4,6 +4,11 @@ export const MainContainer = styled.main`
   flex: 1;
   background-color: ${({ theme }) => theme.colors.background};
   margin-left: 270px;
+  padding-bottom: 1rem;
+
+  #bestselling-title {
+    margin: 0 0 1.2rem 1.5rem;
+  }
 `;
 
 export const HighlightSection = styled.section`
@@ -113,4 +118,7 @@ export const NewsletterContainer = styled.div`
   }
 `
 
-export const BookSection = styled.section``
+export const BookSection = styled.section`
+  padding: 0.625rem;
+  background-color: ${({ theme }) => theme.colors.secondary}; 
+`

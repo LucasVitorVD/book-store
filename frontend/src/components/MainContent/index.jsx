@@ -7,6 +7,7 @@ import greenRetangle from "../../assets/retangle.svg";
 import blueRetangle from "../../assets/blue-retangle.svg";
 import letterIcon from "../../assets/letter-icon.png";
 import Button from "../Elements/Button";
+import BookCarousel from "../BookCarousel";
 
 export default function Main() {
   return (
@@ -14,13 +15,13 @@ export default function Main() {
       <HighlightSection>
         <div className="main_highlight">
           <div className="first_highlight_container">
-            <img src={bookIcon} alt="" width={60} height={60} />
+            <img src={bookIcon} alt="icon" />
             <div>
               <img src={greenRetangle} alt="" className="retangle" />
               <h1>news and</h1>
             </div>
-            <img src={leafIcon} alt="" width={60} height={60} />
-            <img src={notebookIcon} alt="" width={60} height={60} />
+            <img src={leafIcon} alt="icon" />
+            <img src={notebookIcon} alt="icon" />
           </div>
           <div className="second_highlight_container">
             <p>#BookSpace</p>
@@ -44,9 +45,11 @@ export default function Main() {
         </NewsletterContainer>
       </HighlightSection>
 
+      <h3 id="bestselling-title">Bestselling books</h3>
+
       <BookSection>
-        
+        <BookCarousel />
       </BookSection>
     </MainContainer>
-  );
+  )
 }

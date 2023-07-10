@@ -5,6 +5,7 @@ export const StyledHeader = styled.header`
   flex-direction: column;
   position: sticky;
   top: 0;
+  z-index: 1;
 
   nav {
     display: flex;
@@ -82,6 +83,7 @@ export const StyledHeader = styled.header`
     align-items: center;
     padding: 1.25rem 1.8rem;
     font-size: 1.5rem;
+    background-color: ${({ theme }) => theme.colors.primary};
 
     .infos, .filters {
       display: flex;
