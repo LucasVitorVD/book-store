@@ -10,6 +10,7 @@ export const Book = styled.div`
   h4, span {
     font-size: 1.25rem;
     font-weight: 600;
+    text-transform: capitalize;
   }
 
   figure {
