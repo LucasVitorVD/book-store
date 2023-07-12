@@ -49,6 +49,8 @@ const typeDefs = gql`
   input BookFiltersInput {
     isBestSeller: Boolean
     category: String
+    title: String
+    author: String
   }
 `
 
