@@ -1,32 +1,46 @@
+import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import { LiaHomeSolid } from 'react-icons/lia'
 import { BsCart2 } from 'react-icons/bs'
-import { StyledHeader } from './Styled'
+import { HeaderWrapper, NavWrapper, HeaderItemsWrapper, HeaderFiltersWrapper } from './Styled'
 import Button from '../Elements/Button'
 
-export default function Header() {
+export default function Header() { 
+  const navigate = useNavigate()
+  const [query, setQuery] = useState('')
+
+  function handleSearch() {
+    if (query === '') return
+
+    return navigate(`/search?q=${query.toLocaleLowerCase()}`)
+  }
+
   return (
-    <StyledHeader>
-      <nav>
+    <HeaderWrapper>
+      <NavWrapper>
         <div>
-          <LiaHomeSolid size={30} />
-          <a href="#">Contact</a>
-          <a href="#">Help</a>
+          <Link to={"/"}>
+            <LiaHomeSolid size={30} />
+          </Link>
+          <Link to={"#"}>Contact</Link>
+          <Link to={"#"}>Help</Link>
         </div>
 
         <div>
-          <a href="#">Wishlist</a>
-          <a href="#">My orders</a>
-          <a href="#">Sign in/ Sign up</a>
+          <Link to={"#"}>Wishlist</Link>
+          <Link to={"#"}>My orders</Link>
+          <Link to={"#"}>Sign in/ Sign up</Link>
         </div>
-      </nav>
-      <div className="header_items">
+      </NavWrapper>
+      <HeaderItemsWrapper >
         <h1>BookSpace</h1>
-        <div className='search_container'>
-          <input className='search_input' type="search" />
-          <Button text="Search" />
+        <div>
+          <input className='search_input' type="search" onChange={(e) => setQuery(e.target.value)} />
+          <Button text="Search" handleClick={handleSearch} />
         </div>
-      </div>
-      <div className="header_filters">
+      </HeaderItemsWrapper>
+      <HeaderFiltersWrapper>
         <div className='infos'>
           <select name="category" id="category">
             <option>Shop by category</option>
@@ -53,7 +67,7 @@ export default function Header() {
             </div>
           </div>
         </div>
-      </div>
-    </StyledHeader>
+      </HeaderFiltersWrapper>
+    </HeaderWrapper>
   )
 }

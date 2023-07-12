@@ -1,24 +1,23 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Button from "../Elements/Button";
-import { Book } from "./Styled";
+import Book from "../Book";
 import useBooks from "../../hooks/useBooks";
 
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 3,
-    slidesToSlide: 3, // optional, default to 1.
+    slidesToSlide: 3,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
     items: 2,
-    slidesToSlide: 2, // optional, default to 1.
+    slidesToSlide: 2,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
-    slidesToSlide: 1, // optional, default to 1.
+    slidesToSlide: 1,
   },
 };
 
@@ -49,18 +48,14 @@ export default function BookCarousel() {
       )}
       {data && (
         data.books.map((book) => (
-          <Book key={book.id}>
-            <h4>{book.title}</h4>
-            <span>{book.author}</span>
-            <figure>
-              <img
-                src={book.image}
-                alt={book.title}
-              />
-            </figure>
-            <span>USD${book.price}</span>
-            <Button text="Order" />
-          </Book>
+          <Book 
+            key={book.id}
+            id={book.id}
+            title={book.title}
+            author={book.author}
+            image={book.image}
+            price={book.price}
+          />
         ))
       )}
     </Carousel>
