@@ -51,6 +51,7 @@ const typeDefs = gql`
     category: String
     title: String
     author: String
+    language: String
   }
 `
 
