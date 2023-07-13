@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { ButtonElement } from "./Styled"
 
 export default function Button({ text, handleClick }) {
@@ -7,3 +8,8 @@ export default function Button({ text, handleClick }) {
     </ButtonElement>
   )
 }
+
+Button.propTypes = {
+  text: PropTypes.string,
+  handleClick: PropTypes.func,
+};

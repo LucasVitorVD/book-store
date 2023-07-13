@@ -2,9 +2,7 @@ import styled from 'styled-components';
 
 const FooterWrapper = styled.footer`
   background-color: #FFF7EC;
-  color: #550D0E;
   padding: 20px;
-  margin-left: 17rem;
   text-align: center;
 `;
 

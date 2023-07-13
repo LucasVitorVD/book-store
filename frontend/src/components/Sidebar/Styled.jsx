@@ -9,7 +9,6 @@ const SidebarContainer = styled.aside`
   height: 100%;
   width: 16.625rem;
   position: fixed; 
-  z-index: 1;
   top: 240px;
   left: 0;
   background-color: ${({ theme }) => theme.colors.secondary};

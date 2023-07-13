@@ -6,18 +6,22 @@ import Book from "../../components/Book"
 export default function Search() {
   const [searchParams] = useSearchParams()
 
-  const q = searchParams.get('q')
+  const query = searchParams.get('q')
 
-  const { data, loading } = useBooks()
+  const { data, loading } = useBooks({
+    filter: {
+      title: query
+    }
+  })
 
   return (
     <SearchWrapper>
-      <h1>Results about: &quot;{q}&quot;</h1>
+      <h1>Results about: &quot;{query}&quot;</h1>
       <ResultSectionWrapper>
       {loading && (
         <p>Loading...</p>
       )}
-      {data ? (
+      {data && data.books.length > 0 ? (
         data.books.map((book) => (
           <Book 
             key={book.id}
