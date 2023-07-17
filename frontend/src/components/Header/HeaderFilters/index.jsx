@@ -4,7 +4,7 @@ import { BsCart2 } from "react-icons/bs";
 import Select from "../../Elements/Select";
 
 const categoryOptions = [
-  { value: '', label: "Shop by category" },
+  { value: "", label: "Shop by category" },
   { value: "action", label: "Action" },
   { value: "fantasy", label: "Fantasy" },
   { value: "romance", label: "Romance" },
@@ -20,7 +20,7 @@ const langOptions = [
 
 const currencyOptions = [
   { value: "USD$", label: "USD$" },
-  { value: "R$", label: "R$" }
+  { value: "R$", label: "R$" },
 ];
 
 export default function HeaderFilters() {
@@ -47,13 +47,13 @@ export default function HeaderFilters() {
           selectedValue={currency}
           setValue={setCurrency}
         />
+      </div>
 
-        <div className="cart-infos">
-          <span>{currency}0.00</span>
-          <div>
-            <span>0</span>
-            <BsCart2 size={30} />
-          </div>
+      <div className="cart-infos">
+        <span>{currency}0.00</span>
+        <div>
+          <span>0</span>
+          <BsCart2 size={30} />
         </div>
       </div>
     </HeaderFiltersWrapper>

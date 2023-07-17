@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { HeaderItemsWrapper } from "./Styled";
 import Button from "../../Elements/Button";
+import { Link } from "react-router-dom";
 
 export default function HeaderItems() {
   const navigate = useNavigate();
@@ -18,7 +19,9 @@ export default function HeaderItems() {
 
   return (
     <HeaderItemsWrapper>
-      <h1>BookSpace</h1>
+      <Link to={"/"}>
+        <h1>BookSpace</h1>
+      </Link>
       <div>
         <input
           className="search_input"

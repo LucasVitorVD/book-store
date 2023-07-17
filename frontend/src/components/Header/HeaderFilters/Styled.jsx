@@ -29,4 +29,25 @@ export const HeaderFiltersWrapper = styled.div`
       gap: 1.25rem;
     }
   }
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    padding: 1.25rem;
+
+    .infos,
+    .filters {
+      gap: 2rem;
+      margin-top: 1.25rem;
+    }
+
+    .cart-infos {
+      gap: 1rem;
+      padding: 0.625rem 1rem;
+      margin-top: 1rem;
+
+      div {
+        gap: 0.625rem;
+      }
+    }
+  }
 `;

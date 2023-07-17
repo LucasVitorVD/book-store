@@ -6,11 +6,7 @@ const SidebarContainer = styled.aside`
   align-items: center;
   gap: 1.25rem;
   padding: 0.625rem 1.25rem;
-  height: 100%;
-  width: 16.625rem;
-  position: fixed; 
-  top: 240px;
-  left: 0;
+  width: 16rem;
   background-color: ${({ theme }) => theme.colors.secondary};
   overflow-x: hidden;
 
@@ -29,6 +25,10 @@ const SidebarContainer = styled.aside`
       box-shadow: inset 200px 0 0 0 ${({ theme }) => theme.colors.text[0]};
       color: white;
     }
+  }
+
+  @media screen and (max-width: 1020px) {
+    display: none;
   }
 `
 
